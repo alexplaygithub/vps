@@ -79,10 +79,24 @@ install_xfce() {
 
 # Display the menu
 while true; do
-    echo "Choose a desktop environment to install:"
+    echo "
+
+        _______  _                     _    _     _  ______    ______   
+       (_______)| |                   | |  (_)   (_)(_____ \  / _____)  
+  ____  _       | |   ___   _   _   __| |   _     _  _____) )( (____    
+ / _  || |      | |  / _ \ | | | | / _  |  | |   | ||  ____/  \____ \   
+( (_| || |_____ | | | |_| || |_| |( (_| |   \ \ / / | |       _____) )  
+ \___ | \______) \_) \___/ |____/  \____|    \___/  |_|      (______/   
+(_____|                                                                 
+
+"
+    echo "Made with love by alexplaygithub"
+    echo -e ""
+    echo "Choose a desktop environment to install to continue installing noVNC:"
     echo "1. GNOME"
     echo "2. KDE"
     echo "3. XFCE"
+    echo "4. Exit"
     read -p "Enter your choice (1-3): " choice
 
     case $choice in
@@ -95,8 +109,14 @@ while true; do
         3)
             install_xfce
             ;;
+
+        4)
+        echo "Exiting..."
+        exit 0
+        ;;
+        
         *)
-            echo "Invalid choice. Please enter a number between 1 and 3."
+            echo "Invalid choice. Please enter a number between 1 and 4."
             ;;
     esac
 done
